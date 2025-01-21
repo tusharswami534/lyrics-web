@@ -49,7 +49,7 @@ const Hero = () => {
                         <img src={profile} alt="profile" className='size-[206px] pointer-events-none max-lg:size-32 max-sm:size-20' />
                         <div className="flex flex-col">
                             <p className='font-semibold text-[32px] max-lg:text-2xl leading-[42px] text-white max-sm:text-lg'> Billie Eilish <span className='uppercase'> {text} </span> </p>
-                            <p className='font-      font-medium text-base leading-5 text-light-sky-blue pt-[5px] max-lg:pt-0 pb-[21px] max-sm:text-sm'>Released May 17, 2024</p>
+                            <p className='font-medium text-base leading-5 text-light-sky-blue pt-[5px] max-lg:pt-0 pb-[21px] max-sm:text-sm'>Released May 17, 2024</p>
                         </div>
                     </div>
                 </div>
