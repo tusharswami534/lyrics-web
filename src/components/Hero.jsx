@@ -44,9 +44,9 @@ const Hero = () => {
                     <h1 className='font-montserrat text-5xl leading-[58.51px] text-white font-bold max-lg:text-4xl max-sm:text-center max-sm:text-3xl uppercase'>
                         Hit Me Hard and {searchParams.get('value') === 'all' ? 'all' : searchParams.get('value') === 'pop' ? 'Pop' : searchParams.get('value') === 'rock' ? 'Rock' : searchParams.get('value') === 'more' ? 'More': 'Soft'} 
                     </h1>
-                    <img src={hero} alt="hero" className='size-[261px] max-lg:size-48 max-sm:mx-auto max-sm:mt-4' />
+                    <img src={hero} alt="hero" className='size-[261px] pointer-events-none max-lg:size-48 max-sm:mx-auto max-sm:mt-4' />
                     <div className='absolute flex items-center gap-[26px] -bottom-16 max-lg:-bottom-10 max-sm:-bottom-6'>
-                        <img src={profile} alt="profile" className='size-[206px] max-lg:size-32 max-sm:size-20' />
+                        <img src={profile} alt="profile" className='size-[206px] pointer-events-none max-lg:size-32 max-sm:size-20' />
                         <div className="flex flex-col">
                             <p className='font-semibold text-[32px] max-lg:text-2xl leading-[42px] text-white max-sm:text-lg'> Billie Eilish <span className='uppercase'> {text} </span> </p>
                             <p className='font-      font-medium text-base leading-5 text-light-sky-blue pt-[5px] max-lg:pt-0 pb-[21px] max-sm:text-sm'>Released May 17, 2024</p>
