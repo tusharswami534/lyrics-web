@@ -9,10 +9,13 @@ module.exports = {
         'sky-blue': '#DBDBF3',
         'dark-black' : '#14191C',
         'light-gary' : '#333333',
-        'light-sky-blue' : '#CECECE'
+        'light-sky-blue' : '#CECECE',
+        'custom-gray' : '#2E2F37'
+        
       },
       fontFamily: {
-        montserrat : ['Montserrat', 'sans-serif']
+        montserrat : ['Montserrat', 'sans-serif'],
+        poppins : ['Poppins', 'sans-serif']
       }
     },
   },
