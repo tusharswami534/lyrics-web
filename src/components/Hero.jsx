@@ -3,7 +3,6 @@ import { ALPHABET_LIST } from '../utils/helper'
 import hero from '../assets/images/png/hero-image.png';
 import profile from '../assets/images/png/profile.png';
 import Header from './Header';
-import { DownArrow } from '../utils/icons';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 const Hero = () => {
     const navigate = useNavigate()
@@ -13,9 +12,11 @@ const Hero = () => {
         navigate(`/${id}`)
         setActive(id)
     }
-    
-    
 
+    const handleSelectChange = (e) => {
+        setActive(e.target.value)
+        navigate(`/${e.target.value}`)
+    }
     // Search Params 
     const [, setText] = useState()
     const [ searchParams , setSearchParams ] = useSearchParams()
@@ -32,7 +33,11 @@ const Hero = () => {
                     <button onClick={() => handleClick('all')} className={`px-[13px] pt-[2px] pb-[1px] leading-[24px] max-md:leading-[18px] text-xs font-medium bg-white border border-solid border-dark-black rounded-[9px] transition-all duration-300 ${(id === 'all' || id === '') ? '!bg-[#14191C] text-white' : ''}`}>All</button>
                     <button onClick={() => handleClick('pop')} className={`px-[11px] pt-[2px] pb-[1px] text-xs leading-[24px] max-md:leading-[18px] font-medium bg-white border border-solid border-dark-black rounded-[9px] transition-all duration-300 ${id === 'pop' ? '!bg-[#14191C] text-white' : ''} `}>Pop</button>
                     <button onClick={() => handleClick('rock')} className={`px-[11px] pt-[2px] pb-[1px] text-xs leading-[24px] max-md:leading-[18px] font-medium bg-white border border-solid border-dark-black rounded-[9px] transition-all duration-300 ${id === 'rock' ? '!bg-[#14191C] text-white' : ''} `}>Rock</button>
-                    <button onClick={() => handleClick('more')} className={`px-[9px] pt-[2px] pb-[1px] text-xs leading-[24px] max-md:leading-[18px] font-medium bg-white border border-solid border-dark-black rounded-[9px] transition-all duration-300 flex items-center gap-[5px] group ${id === 'more' ? '!bg-[#14191C] text-white' : ''}`}> More<DownArrow myClass={`transition-all duration-300 ${id === 'more' ? 'stroke-white' : ''}`}/></button>
+                    <select value={id} onChange={handleSelectChange} className={`${id === "lofi" || id === "song" || id === "more" ? "bg-black text-white" : ""} outline-none !text-xs text-customBlack py-[5.84px] !pl-[9.2px] !pr-[22.15px] cursor-pointer border appearance-none border-black rounded-[9px] font-medium max-sm:px-3 max-sm:py-2`}>
+                            <option value="more">More</option>
+                            <option value="lofi">Lofi</option>
+                            <option value="song">Song</option>
+                        </select>
                     <div className='flex items-center gap-[2px]'>
                         {ALPHABET_LIST.map((item, index) => (
                             <button
@@ -46,7 +51,7 @@ const Hero = () => {
                 </div>
                 <div className='bg-[#14191C] rounded-[22px] flex pl-12 pr-[43px] justify-between pt-[38px] mt-[35px] relative pb-[43px] max-sm:flex-wrap max-sm:pt-4 max-sm:px-5 max-sm:pb-20'>
                     <h1 className='font-montserrat text-5xl leading-[58.51px] text-white font-bold max-lg:text-4xl max-sm:text-center max-sm:text-3xl uppercase'>
-                    Hit Me Hard and  {id === 'pop' ? ' Pop' : id === 'rock' ? ' Rock' : id === 'more' ? ' More' : (id === 'all' || id === '/') ? ' Soft' : ' Soft'}
+                    Hit Me Hard and  {id === 'pop' ? ' Pop' : id === 'rock' ? ' Rock' : id === 'more' ? ' More' : (id === 'all' || id === '/') ? ' Soft' : id === 'lofi' ? ' Lofi' : id === 'song' ? ' Song' : ''}
                     </h1>
                     <img src={hero} alt="hero" className='size-[261px] pointer-events-none max-lg:size-48 max-sm:mx-auto max-sm:mt-4' />
                     <div className='absolute flex items-center gap-[26px] -bottom-16 max-lg:-bottom-10 max-sm:-bottom-6'>

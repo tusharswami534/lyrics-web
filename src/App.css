@@ -1,0 +1,6 @@
+select {
+    background-image: url("./assets/images/svg/down-arrow.svg") !important;
+    background-position: right 9px top 50%;
+    background-size: 0.65rem auto;
+    background-repeat: no-repeat;
+  }
