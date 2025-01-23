@@ -47,7 +47,7 @@ const Song = () => {
           </tbody>
         </table>
         <input hidden onChange={handleImage} type="file" id='image' />
-        <div className='min-h-[600px] max-md:min-h-[500px] max-sm:min-h-[400px] relative max-w-[300px] w-full overflow-hidden group bg-blue-500 rounded-2xl flex justify-center items-center mx-auto'>
+        <div className='min-h-[600px] max-md:min-h-[500px] max-sm:min-h-[400px] relative max-w-[300px] w-full overflow-hidden group bg-blue rounded-2xl flex justify-center items-center mx-auto'>
           {image ? <div><img src={image} alt="images" /><button onClick={deleteImage} className='absolute top-4 right-4 text-white'>X</button></div> : <label className='cursor-pointer absolute flex justify-center items-center w-full h-full text-center bg-blue-500 text-white ' htmlFor="image">Add Place</label>}
         </div>
       </div>

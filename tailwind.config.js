@@ -10,7 +10,9 @@ module.exports = {
         'dark-black' : '#14191C',
         'light-gary' : '#333333',
         'light-sky-blue' : '#CECECE',
-        'custom-gray' : '#2E2F37'
+        'custom-gray' : '#2E2F37',
+        'blue' : '#007BFF'
+        
         
       },
       fontFamily: {
