@@ -46,7 +46,7 @@ export const FOOTER_LYRICS_WEB_LIST =[
     },
     {
         title : 'About Us',
-        like : '#about'
+        link : '#about'
     },
     {
         title : 'Help',
@@ -54,7 +54,7 @@ export const FOOTER_LYRICS_WEB_LIST =[
     },
     {
         title : 'Contact us',
-        like : '#contact'
+        link : '#contact'
     },
     {
         title : 'Press',
@@ -69,7 +69,7 @@ export const FOOTER_SONGS_LIST =[
     },
     {
         title : 'Releases',
-        like : '#releases'
+        link : '#releases'
     },
     {
         title : 'Add a new song',
@@ -77,7 +77,7 @@ export const FOOTER_SONGS_LIST =[
     },
     {
         title : 'Your Playlist',
-        like : '#your-playlist'
+        link : '#your-playlist'
     },
     {
         title : 'Press',
@@ -92,7 +92,7 @@ export const FOOTER_ARTIST_LIST =[
     },
     {
         title : 'Top Albums',
-        like : '#top-albums'
+        link : '#top-albums'
     },
     {
         title : 'Add a new song',
@@ -100,7 +100,7 @@ export const FOOTER_ARTIST_LIST =[
     },
     {
         title : 'Your Playlist',
-        like : '#your-playlist'
+        link : '#your-playlist'
     },
     {
         title : 'Latest News',
@@ -116,7 +116,7 @@ export const FOOTER_FOLLOW_US_LIST =[
     },
     {
         title : 'Instagram',
-        like : 'https://www.instagram.com/',
+        link : 'https://www.instagram.com/',
         icon : <InstagramIcon/>
     },
     {
@@ -126,7 +126,7 @@ export const FOOTER_FOLLOW_US_LIST =[
     },
     {
         title : 'Pinterest',
-        like : 'https://www.pinterest.com/',
+        link : 'https://www.pinterest.com/',
         icon : <PinterestIcon/>
     },
 ]
