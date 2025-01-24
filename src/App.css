@@ -4,3 +4,11 @@ select {
     background-size: 0.65rem auto;
     background-repeat: no-repeat;
   }
+
+  ::-webkit-scrollbar{
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color: black;
+  }

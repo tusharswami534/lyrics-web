@@ -7,6 +7,11 @@ const [open , setOpen] = useState(false)
     function handleSearch (e){
         e.preventDefault()
     }
+
+    const handleClick =() => {
+        setOpen(!open)
+        document.body.style.overflow = open ? '' : 'hidden'
+    }
     
     return (
         <div className='px-3'>
@@ -28,7 +33,7 @@ const [open , setOpen] = useState(false)
                     </form>
                 </div>
                 </div>
-                <button onClick={()=>setOpen(!open)} className='max-md:flex flex-col relative z-20 overflow-hidden size-6 justify-between hidden'>
+                <button onClick={handleClick} className='max-md:flex flex-col relative z-20 overflow-hidden size-6 justify-between hidden'>
                     <span className={`flex w-6 bg-black h-0.5 transition-all duration-300 ${open ? 'bg-white translate-x-10' : ''}`}></span>
                     <span className={`flex w-6 bg-black h-0.5 transition-all duration-300 relative after:absolute after:w-6 after:h-0.5 after:bg-black after:transition-all after:duration-300 after:top-0 ${open ? 'bg-white rotate-45 after:bg-white after:rotate-90' : ''}`}></span>
                     <span className={`flex w-6 bg-black h-0.5 transition-all duration-300 ${open ? 'bg-white -translate-x-10' : ''}`}></span>
